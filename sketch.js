@@ -20,7 +20,7 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-    umbrella = new Umbrella(200, 575);    
+    umbrella = new Umbrella(200, 470);    
     maxDrops = 100;
 
     for(var i=0; i<maxDrops; i++){
@@ -30,7 +30,7 @@ function setup(){
 
 function draw(){
     background(0);
-
+    Engine.update(engine);
     umbrella.display();
     for(var i=0; i<drops.length; i++){
         drops[i].display();
